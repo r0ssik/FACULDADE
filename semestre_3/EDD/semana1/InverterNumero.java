@@ -1,3 +1,4 @@
+package semana1;
 public class InverterNumero{
     public static int inverter(int numero) {
         if (numero < 0) {

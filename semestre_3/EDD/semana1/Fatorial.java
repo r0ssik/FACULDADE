@@ -1,3 +1,4 @@
+package semana1;
 // Função usando recursividade, já fizemos ela com python antes.
 
 public class Fatorial {

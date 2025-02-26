@@ -1,3 +1,4 @@
+package semana1;
 public class ComparadorVetores {
     public static boolean saoIdenticos(int[] vetor1, int[] vetor2) {
         if (vetor1.length != vetor2.length) { 
