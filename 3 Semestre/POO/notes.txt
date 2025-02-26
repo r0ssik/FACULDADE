@@ -1,0 +1,74 @@
+P.O.O AULA - 1
+
+Paradigma -- Modelo para abordar situações que necessitam soluções, podem ter varias soluções, temos que escolher a melhor.
+
+Exemplos de Paradagimas -- 
+            Impertavio
+            (
+                Foca em como o computador vai executar as tarefas, possui série e in.struções que mudam o estado 
+                do programa
+                Linguagens(Exemplos): C, C++, Python
+            )
+            Orientada a Objetos
+            (
+                Organiza o código quem objetos, este objeto possui dados e comportamentos, preza por reutilização e
+                encapsulamento de programa.
+                Linguagens(Exemplos): Java, C++, C#, Python
+            )
+            Funcional
+            (
+                Baseia-se em funções matematicas puras, evita o uso de estados mutáveis e efeitos colaterais
+                Linguagens(Exemplos): Haskell, Elixir.
+            )
+            Declarativo
+            (
+                Foca no que o programa deve realizar, não em como.
+                Linguagens(Exemplos): SQL, XQuery
+            )
+
+Linguagens multi-paradigmas são linguagens que se encaixam em vários paradigmas...
+
+---FOCO P.O.O(POO)
+
+Comunicação feita por meio de objetos organizados de forma hierárquica.
+
+Objetos
+    Extensões do mundo real, no mundo da programação... Objetos que correspondem ao elemento da vida real para
+    manipulação de elementos dentro da programação.
+
+Objetos X Classes
+    Considerando que o objetos são elementos da vida real, as classes são os agrupamentos destes elementos.
+
+Exemplo 
+    CANETA
+        CANETA AZUL
+        CANETA PRETA
+        CANETA VERMELHA
+
+Duvida -- Possibilidade -- hierárquia?!
+    CANETA
+        CANETA AZUL
+            CANETA AZUL PARA PAPEL
+            CANETA AZUL PARA PAREDE
+            CANETA AZUL PARA LOUSA BRANCA
+        CANETA PRETA
+            CANETA PRETA PARA PAPEL
+            CANETA PRETA PARA PAREDE
+            CANETA AZUL PARA LOUSA
+
+
+Filtros????
+
+-- Infinitas possibilidades de Objetos, possivel entrada de árvores??
+
+Exemplo(Analisar se faz sentido)
+
+
+Classe              Apostila            Carteira            Celular
+            
+Objetos             Matematica          Madeira             Xiaomi
+                    Portugues           Verde               Samsung
+                    Quimica             Plastico            Flip/TouchScreen
+
+
+
