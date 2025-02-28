@@ -1,12 +1,18 @@
 LINUX NOTES
 
+acesse -> github.com/unasp-aulas/sistemas-operacionais
+
 cd -> mudar diretorio 
 
 cd .. -> voltar diretorio
 
 ls -> lsitar arquivos no diretorios
 
-cat -> ver o conteudo do arquivosmkdir -> criar uma pasta
+cat -> ver o conteudo do arquivos
+
+mkdir -> criar uma pasta
+
+strace -c mkdir pasta -> mostra todas as chamadas de sistemas relacionadas com isto.
 
 echo "texto" > arquivo.txt -> escrever no arquivo
 
@@ -16,3 +22,7 @@ escrever w script.py -- "shift :" para escrever q e sair
 clear ou "ctrl l" -> apagar toda a tela
 
 man "comando" -> mini tutorial do comando
+
+uname -a -> ??
+
+acces -> verificar posição
