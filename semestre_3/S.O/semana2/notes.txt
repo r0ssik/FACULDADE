@@ -1,0 +1,7 @@
+cd -> mudar diretorio 
+cd .. -> voltar diretorio
+ls -> lsitar arquivos no diretorios
+cat -> ver o conteudo do arquivosmkdir -> criar uma pasta
+echo "texto" > arquivo.txt -> escrever no arquivo
+vim -> abrir o editor de codigo -- clicar no i para poder digitar, clicar no esc para poder sair do modo -- "shif :" para
+escrever w script.py -- "shift :" para escrever 0 e sair
