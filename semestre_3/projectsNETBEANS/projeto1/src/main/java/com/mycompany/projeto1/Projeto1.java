@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.projeto1;
+package semestre_3.projectsNETBEANS.projeto1.src.main.java.com.mycompany.projeto1;
 
 /**
  *
