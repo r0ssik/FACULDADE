@@ -1,0 +1,41 @@
+Estruturas Complexas
+
+Estrutura Pessoa {
+    texto nome
+    inteiro idade
+    texto telefone
+}
+
+pessoa p = nova Pessoa;
+
+Exemplo:
+
+
+[Bloco de memória particular que conseguimos acessar]
+public class Pessoa{
+    String nome;
+    int idade;
+    String tel;
+}
+
+public class TestePessoa{
+    public static void main(String[] s){
+        Pessoa p = new Pessoa();
+        p.nome = "Marcelo";
+        p.idade = 29;
+        p.tel = "5519988540946";
+
+        p = p2;
+
+        p.idade = 15;
+        System.out.println(p2.idade);
+        // 15
+
+    }
+}
+
+//Continuando Exemplo
+Pessoa[] alunos = new Pessoa[5]
+for (int = 0; i < alunos.lenght; ++i){
+    alunos[i] = new Pessoa();
+}
