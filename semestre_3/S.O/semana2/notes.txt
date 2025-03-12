@@ -12,6 +12,8 @@ cat -> ver o conteudo do arquivos
 
 mkdir -> criar uma pasta
 
+wq -> salvar e sair
+
 strace -c mkdir pasta -> mostra todas as chamadas de sistemas relacionadas com isto.
 
 echo "texto" > arquivo.txt -> escrever no arquivo
