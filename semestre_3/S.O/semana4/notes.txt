@@ -1,0 +1,6 @@
+CONECTAR COM O SERVER AWS
+
+ssh -i {minha_chave.pem} {DNS PUBLICA}
+
+
+#
