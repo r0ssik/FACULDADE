@@ -5,7 +5,7 @@ public class Pessoa {
     String nome;
 
     public static String retornaVelho(Pessoa[] list){
-        int mais_velha = 0;
+        int mais_velha = list[0].idade;
         String nome_velha = "";
         for(int i = 0; i < list.length; i++){
             Pessoa p = list[i];
@@ -13,7 +13,6 @@ public class Pessoa {
                 nome_velha = p.nome;
             }
         }
-        System.out.println(nome_velha);
         return nome_velha;
     }
     public static void main(String[] args){
@@ -27,7 +26,8 @@ public class Pessoa {
         p3.idade = 25;
         p3.nome = "Veio da havan";
         Pessoa[] list = {p1, p2, p3};
-        retornaVelho(list);
+        System.out.println(retornaVelho(list));
+
         
     }
 }
