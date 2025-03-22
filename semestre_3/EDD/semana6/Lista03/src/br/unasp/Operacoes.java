@@ -79,7 +79,7 @@ public class Operacoes {
 	 * 
 	 */
 	static Aluno encontrarMaiorMedia(Aluno[] classe) {
-		if (classe.length > 0){
+		if (classe.length == 0){
 			return null;
 		}
 		Aluno pessoa_final = null;
@@ -111,6 +111,12 @@ public class Operacoes {
 	 * 
 	 */
 	static boolean existeAlunoRA(Aluno[] classe, int ra) {
+		for(int i = 0; i < classe.length; i++){
+			int ra_aluno = classe[i].ra;
+			if(ra_aluno == ra){
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -126,6 +132,26 @@ public class Operacoes {
 	 * 
 	 */
 	static String aprovados(Aluno[] classe, double notaCorte) {
-		return "{}";
+		if (classe == null || classe.length == 0) {
+			return "{}";
+		}
+	
+		String resultado = "{";
+		boolean primeiro = true;
+	
+		for (int i = 0; i < classe.length; i++) {
+			if (calcularMedia(classe[i]) >= notaCorte) {
+				if (!primeiro) {
+					resultado += ", ";
+				}
+				resultado += classe[i].nome;
+				primeiro = false;
+			}
+		}
+	
+		resultado += "}";
+		return resultado;
 	}
+	
+	
 }
