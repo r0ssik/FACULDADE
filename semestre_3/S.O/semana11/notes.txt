@@ -1,0 +1,10 @@
+sudo docker image ls
+sudo docker build -t 
+sudo docker pull (usuario do docker/imagem)
+
+-- Crair imagens que é o que o sistema operacional rodado vai fazer diretamente quando chamado
+
+FROM alpine 
+RUN apk add python3
+COPY script.py script.py
+CMD 
