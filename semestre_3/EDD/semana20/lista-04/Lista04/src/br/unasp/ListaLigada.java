@@ -2,91 +2,105 @@ package br.unasp;
 
 public class ListaLigada {
 
-	Elemento raiz;
+    /**
+     * Ponto de início da lista ligada.
+     */
+    Elemento raiz;
 
-	// Insere um novo aluno no final da lista
-	void inserir(Aluno novoAluno) {
-		Elemento novoElemento = new Elemento();
-		novoElemento.alu = novoAluno;
-		novoElemento.proximo = null;
+    /**
+     * Insere um novo aluno no final da lista.
+     */
+    void inserir(Aluno novoAluno) {
+        Elemento new_element = new Elemento();
+        new_element.alu = novoAluno;
+        new_element.proximo = null;
 
-		if (raiz == null) {
-			raiz = novoElemento;
-		} else {
-			Elemento atual = raiz;
-			while (atual.proximo != null) {
-				atual = atual.proximo;
-			}
-			atual.proximo = novoElemento;
-		}
-	}
+        if (raiz == null) {
+            raiz = new_element;
+        } else {
+            Elemento loop = raiz;
+            while (loop.proximo != null) {
+                loop = loop.proximo;
+            }
+            loop.proximo = new_element;
+        }
+    }
 
-	// Retorna a representação dos nomes dos alunos na lista
-	String imprimir() {
-		if (raiz == null) {
-			return "{}";
-		}
+    /**
+     * Retorna uma String com os nomes dos alunos entre chaves e separados por vírgulas.
+     */
+    String imprimir() {
+        if (raiz == null) {
+            return "{}";
+        }
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("{");
+        String resultado = "{";
+        Elemento atual = raiz;
 
-		Elemento atual = raiz;
-		while (atual != null) {
-			sb.append(atual.alu.nome);
-			if (atual.proximo != null) {
-				sb.append(", ");
-			}
-			atual = atual.proximo;
-		}
+        while (atual != null) {
+            resultado += atual.alu.nome;
+            if (atual.proximo != null) {
+                resultado += ", ";
+            }
+            atual = atual.proximo;
+        }
 
-		sb.append("}");
-		return sb.toString();
-	}
+        resultado += "}";
+        return resultado;
+    }
 
-	// Calcula a média das notas de um aluno
-	double calcularMedia(Aluno alu) {
-		if (alu.notas == null || alu.notas.length == 0) {
-			return 0.0;
-		}
-		double soma = 0.0;
-		for (double nota : alu.notas) {
-			soma += nota;
-		}
-		return soma / alu.notas.length;
-	}
+    /**
+     * Calcula a média das notas de um aluno.
+     */
+    double calcularMedia(Aluno alu) {
+        if (alu.notas == null || alu.notas.length == 0) {
+            return 0.0;
+        }
 
-	// Retorna o aluno com a maior média
-	Aluno encontrarMaiorMedia() {
-		if (raiz == null) {
-			return null;
-		}
+        double soma = 0.0;
+        for (int i = 0; i < alu.notas.length; i++) {
+            soma += alu.notas[i];
+        }
 
-		Elemento atual = raiz;
-		Aluno alunoMaiorMedia = atual.alu;
-		double maiorMedia = calcularMedia(alunoMaiorMedia);
-		atual = atual.proximo;
+        return soma / alu.notas.length;
+    }
 
-		while (atual != null) {
-			double mediaAtual = calcularMedia(atual.alu);
-			if (mediaAtual > maiorMedia) {
-				maiorMedia = mediaAtual;
-				alunoMaiorMedia = atual.alu;
-			}
-			atual = atual.proximo;
-		}
+    /**
+     * Encontra o aluno com a maior média geral.
+     */
+    Aluno encontrarMaiorMedia() {
+        if (raiz == null) {
+            return null;
+        }
 
-		return alunoMaiorMedia;
-	}
+        Aluno melhorAluno = raiz.alu;
+        double maiorMedia = calcularMedia(melhorAluno);
 
-	// Verifica se existe um aluno com o RA informado
-	boolean existeAlunoRA(int ra) {
-		Elemento atual = raiz;
-		while (atual != null) {
-			if (atual.alu.ra == ra) {
-				return true;
-			}
-			atual = atual.proximo;
-		}
-		return false;
-	}
+        Elemento atual = raiz.proximo;
+
+        while (atual != null) {
+            double mediaAtual = calcularMedia(atual.alu);
+            if (mediaAtual > maiorMedia) {
+                maiorMedia = mediaAtual;
+                melhorAluno = atual.alu;
+            }
+            atual = atual.proximo;
+        }
+
+        return melhorAluno;
+    }
+
+    /**
+     * Verifica se um aluno com o RA informado existe na lista.
+     */
+    boolean existeAlunoRA(int ra) {
+        Elemento atual = raiz;
+        while (atual != null) {
+            if (atual.alu.ra == ra) {
+                return true;
+            }
+            atual = atual.proximo;
+        }
+        return false;
+    }
 }
