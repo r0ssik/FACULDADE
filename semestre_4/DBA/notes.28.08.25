@@ -3,7 +3,7 @@ Confidencialidade
 Integridade
 Disponibilidade
 
-
+-----------------------------------------
 Instalar PostgreeSQL
 
 User postgres
@@ -13,4 +13,5 @@ senha 7654321
 
 Instalar
 Dbeaver
+
 
