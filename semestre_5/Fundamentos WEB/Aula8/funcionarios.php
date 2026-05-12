@@ -87,7 +87,13 @@
     }
 
     function buscarFuncaoFuncionario($conexao, $nome) {
-        $stm = $conexao->prepare("SELECT nome, id_funcao FROM funcionarios WHERE nome = ?");
+        $sql = "
+            SELECT f.nome, fc.descricao
+            FROM funcionarios f
+            INNER JOIN funcoes fc ON f.id_funcao = fc.id
+            WHERE f.nome = ?
+        ";
+        $stm = $conexao->prepare($sql);
         $stm->bind_param("s", $nome);
         $stm->execute();
         $resultado = $stm->get_result();
@@ -97,22 +103,8 @@
             return;
         }
 
-        $funcionario = $resultado->fetch_assoc();
-        $id_funcao   = $funcionario["id_funcao"];
-        $nome_real   = $funcionario["nome"];
-
-        $stm2 = $conexao->prepare("SELECT descricao FROM funcoes WHERE id = ?");
-        $stm2->bind_param("i", $id_funcao);
-        $stm2->execute();
-        $resultado_funcao = $stm2->get_result();
-
-        if ($resultado_funcao->num_rows == 0) {
-            echo "Funcao do funcionario '$nome' nao encontrada.\n";
-            return;
-        }
-
-        $funcao = $resultado_funcao->fetch_assoc();
-        echo "Funcionario " . $nome_real . " tem a funcao " . $funcao["descricao"] . "\n";
+        $row = $resultado->fetch_assoc();
+        echo "Funcionario " . $row["nome"] . " tem a funcao " . $row["descricao"] . "\n";
     }
 
     // CHAMADAS
