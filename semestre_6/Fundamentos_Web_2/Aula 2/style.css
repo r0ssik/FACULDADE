@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --cor-principal:  rgb(87, 11, 150);
+  --cor-sec: white;
+  --cor-terc: rgb(208, 90, 255);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inconsolata", monospace;
+    margin: 0;
+    background-color: var(--cor-sec);
+    color: #333333;
+}
+
+header{
+    background-color: var(--cor-principal);
+    color:var(--cor-sec);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin: 0;
+}
+
+header nav a{
+    color: var(--cor-sec);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header nav a:hover{
+    color: #457b9d;
+}
+
+footer{
+    background-color: var(--cor-principal);
+    color:var(--cor-sec);
+    padding: 20px;
+    text-align: center;
+    margin-top:40px;
+}
+
+footer h1{
+    margin: 0;
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+.inicio{
+    text-align:  center;
+    padding: 50px 20px;
+}
+
+.inicio h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.inicio p{
+    font-size: 18px;
+    color: #555555;
+}
+
+.botao{
+    display: inline-block;
+    background-color:var(--cor-principal);
+    color:var(--cor-sec);
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width:  1px solid ;
+    max-width: 400px;
+}
+
+button{
+    display: inline-block;
+    background-color:var(--cor-principal);
+    color:var(--cor-sec);
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.cards{
+    display:flex;
+    gap: 20px;
+}
+
+.card{
+    background-color: var(--cor-principal);
+    color: var(--cor-sec);
+    border: 2px solid var(--cor-sec);
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px 0px black;
+    flex: 1;
+    padding: 20px;
+}
+
+.card:hover{
+    transform:translate(-5px)
+}
+
+.informacoes{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.informacoes div{
+    background-color: var(--cor-principal);
+    border-left: 5px solid var(--cor-terc);
+    color: var(--cor-sec);
+    padding: 20px;
+}
+

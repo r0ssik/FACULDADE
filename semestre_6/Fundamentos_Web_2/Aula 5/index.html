@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Países</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Explorador de Países</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+
+        <h1>Explore Países</h1>
+        <p>Digite um país para descobrir informações.</p>
+
+        <form id="formPais">
+            <div class="mb-3">
+                <label for="pais" class="form-label">Digite o país</label>
+                <input type="text" id="pais" class="form-control" placeholder="Ex: Brazil" required>
+            </div>
+
+            <button type="submit" class="btn btn-info">Buscar</button>
+        </form>
+
+        <hr class="my-5">
+
+        <h3 class="text-center mb-4">Resultado</h3>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+            <div class="col">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Capital</h5>
+                        <p id="capital" class="card-text">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">População</h5>
+                        <p id="populacao" class="card-text">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Moeda</h5>
+                        <p id="moeda" class="card-text">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Bandeira</h5>
+                        <img id="bandeira" class="img-fluid" style="max-height: 150px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
